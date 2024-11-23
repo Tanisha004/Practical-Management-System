@@ -13,6 +13,9 @@ app.use(express.json());
 app.use("/", router);
 
 dbConnect();
+app.get("/",(req,res)=>{
+  res.send("Hello");
+});
   
 app.listen(PORT, () => {
   console.log("Server is running at port:", PORT);
